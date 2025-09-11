@@ -3,12 +3,24 @@
   "name": "AccessiBridge",
   "version": "1.0",
   "description": "Accessibility helper that connects to Flask + OpenRouter",
-  "permissions": ["activeTab", "scripting", "tabs"],
-  "host_permissions": ["http://localhost:5000/*", "<all_urls>"],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://localhost:5000/*",
+    "<all_urls>"
+  ],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
     }
   ],
   "action": {

@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Accessi-Bridge</title>
-    <link rel="stylesheet" href="popup.css" />
-  </head>
-  <body>
-    <h1>Accessi-Bridge</h1>
-    <p>Accessibility Checker</p>
-    <button id="scanButton">Run Accessibility Scan</button>
-    <div id="result"></div>
-    <script src="popup.js"></script>
-  </body>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Accessi-Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <span class="logo-icon">♿</span>
+        <h1>Accessi-Bridge</h1>
+      </div>
+    </div>
+
+    <!-- Score Gauge -->
+    <div class="score-section">
+      <div class="chart-container">
+        <svg class="donut-chart" viewBox="0 0 42 42">
+          <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="transparent"></circle>
+          <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#2c2c2c"
+            stroke-width="3"></circle>
+          <circle id="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#8a4dff"
+            stroke-width="3" stroke-dasharray="0 100" stroke-dashoffset="25" transform="rotate(-90 21 21)"></circle>
+        </svg>
+        <div id="scoreText" class="score-text">0%</div>
+      </div>
+      <p id="status" class="status-text">Ready to scan...</p>
+    </div>
+
+    <!-- Issues Breakdown -->
+    <div class="issues-breakdown">
+      <div class="indicator">
+        <span class="indicator-label">Missing Alt Text</span>
+        <span class="indicator-number" id="alt-text-count">-</span>
+      </div>
+      <div class="indicator">
+        <span class="indicator-label">Contrast Issues</span>
+        <span class="indicator-number" id="contrast-count">-</span>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions-section">
+      <button id="scanButton" class="action-btn primary-btn">
+        <span class="btn-icon">🔍</span>
+        Scan Page
+      </button>
+      <button id="generateAltBtn" class="action-btn secondary-btn">
+        <span class="btn-icon">🤖</span>
+        Generate AI Alt Text
+      </button>
+      <button id="fixContrastBtn" class="action-btn fix-btn" style="display: none;">
+        <span class="btn-icon">🎨</span>
+        Fix Contrast Issues
+      </button>
+    </div>
+  </div>
+</body>
+<script src="popup.js"></script>
+
 </html>
