@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "AccessiBridge",
-  "version": "1.0",
-  "description": "Accessibility helper that connects to Flask + OpenRouter",
+  "version": "1.0.0",
+  "description": "AI-powered accessibility auditing and fixing for the web",
   "permissions": [
     "activeTab",
     "scripting",
@@ -24,6 +24,7 @@
     }
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "AccessiBridge - Make the Web Accessible"
   }
 }

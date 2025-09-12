@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Accessi-Bridge</title>
+  <title>AccessiBridge</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <div class="header">
       <div class="logo">
         <span class="logo-icon">♿</span>
-        <h1>Accessi-Bridge</h1>
+        <h1>AccessiBridge</h1>
       </div>
     </div>
 
@@ -61,9 +61,31 @@
         <span class="btn-icon">🎨</span>
         Fix Contrast Issues
       </button>
+      <button id="aiReportBtn" class="action-btn report-btn">
+        <span class="btn-icon">📄</span>
+        Generate AI Report
+      </button>
     </div>
   </div>
+
+  <!-- AI Report Modal -->
+  <div id="reportModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🌉 Accessibility Report</h3>
+        <button id="closeReport" class="close-btn">✖</button>
+      </div>
+      <div class="modal-body">
+        <pre id="reportContent" class="report-content"></pre>
+      </div>
+      <div class="modal-footer">
+        <button id="copyReport" class="action-btn secondary-btn">📋 Copy</button>
+        <button id="downloadReport" class="action-btn primary-btn">💾 Download</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
-<script src="popup.js"></script>
 
 </html>
