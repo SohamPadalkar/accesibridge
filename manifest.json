@@ -25,6 +25,10 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "AccessiBridge - Make the Web Accessible"
-  }
+    "default_title": "AccessiBridge - Make the Web Accessible",
+    "default_icon": "icons/logo.png"
+  },
+  "icons": {
+    "128": "icons/logo.png"
+  } 
 }
